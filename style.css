@@ -131,8 +131,8 @@ main .container {
 }
 
 main .container .my-image img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     margin: 10px;
     /* border: 3px solid black; */
     /* border-radius: 10px; */
@@ -145,8 +145,8 @@ main .container .my-info {
     border-radius: 5px;
     text-align: center;
     width: 500px;
+    height: 300px;
     max-width: 600px;
-    height: 250px;
 }
 
 main .container .my-info p {
