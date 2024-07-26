@@ -58,7 +58,7 @@ body {
 }
 
 .search-box input:focus {
-    color: rgb(163, 163, 163);
+    color: rgb(210, 210, 210);
 }
 
 .search-box button {
