@@ -1,249 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 body {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: seashell;
+    height: 100vh;
+    background-image: url("./image/shit.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 400px;
+    height: 60px;
+    padding: 20px;
+    border: 2px solid rgba(133, 133, 133, 0.6);
+    border-radius: 16px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
-header nav {
-    top: 0;
-    background-color: white;
-    color: #fff;
-    padding: 10px;
-    margin: 0;
-    position: fixed;
+.search-box.expanded {
+    width: 500px;
+}
+
+.search-box input {
+    position: absolute;
     width: 100%;
-    z-index: 10;
-    border-bottom: 2px solid black; /* Đảm bảo có đường viền giữa header và main */
+    height: 50px;
+    box-sizing: border-box;
+    border: 2px solid rgba(133, 133, 133, 0.6);
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 500px;
+    background: transparent;
+    padding: 0 48px;
+    color: rgb(210, 210, 210);
 }
 
-header nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.search-box input::placeholder {
+    color: rgb(228, 228, 228, 0.5);
+    margin-left: 40px;
 }
 
-.logo {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 2rem;
+.search-box input:focus {
+    color: rgb(163, 163, 163);
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    padding: 5px;
-    margin: 0;
-    padding-right: 15px;
-}
-
-.nav-menu li {
-    margin: 0;
-    color: black;
-    padding: 5px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px 10px;
-    border-radius: 50px;
-    border: 3px solid black;
-}
-
-.nav-menu li a:hover {
-    color: white;
-    background-color: black;
-}
-
-.hamburger {
-    display: none;
+.search-box button {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    font-size: 28px;
+    border: none;
+    outline: none;
     cursor: pointer;
-    padding-right: 30px;
 }
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+.search-box i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
 }
 
-/* Menu bật tắt */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-menu li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-}
-
-/* MAIN CSS */
-
-/* about / */
-main {
-    display: block;
-    margin-top: 80px; /* Đảm bảo main nằm dưới header */
-    padding: 20px; /* Thêm khoảng trống để phân biệt rõ header và main */
-}
-
-main .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    margin: 0;
-}
-
-main .container .my-image img {
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    /* border: 3px solid black; */
-    /* border-radius: 10px; */
-}
-
-main .container .my-info {
-    border: 3px solid black;
+#display {
+    padding: 30px;
+    color: rgb(222, 218, 218);
     font-size: medium;
-    margin: 10px;
-    border-radius: 5px;
     text-align: center;
-    width: 500px;
-    height: 300px;
-    max-width: 600px;
-}
-
-main .container .my-info p {
-    font-weight: bold;
-}
-
-/* my project  */
-
-main .about {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-shrink: 1;
-    flex-wrap: wrap-reverse;
-}
-
-main .about .my-flex {
-    margin: 5px;
-    display: flex;
-}
-
-main .about .my-flex img {
-    height: 400px;
-    padding-top: 10px;
-    width: 400px;
-    /* height: 400px */
-    /* border: 3px solid black; */
-}
-
-main .about .my-intro {
-    border: 3px solid black;
-    padding: 5px;
-    margin: 5px;
-    width: 500px;
-    border-radius: 5px;
-}
-
-main .about .my-intro p {
-    font-weight: bold;
-}
-
-/* SKILL */
-
-main .skill {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    margin-top: 30px;
-}
-
-main .skill .skill-intro {
-    width: 500px;
-    border: 3px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: large;
-    font-weight: bold;
-}
-
-main .skill .skill-img img {
-    width: 440px;
-    height: 440px;
-}
-
-/* expierence  */
-
-main .expierence {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    flex-shrink: 1;
-    margin-top: 30px;
-}
-
-main .expierence .ex-intro {
-    width: 500px;
-    border: 3px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    font-weight: bold;
-    font-size: large;
-}
-
-main .expierence .ex-img img {
-    width: 380px;
-    height: 380px;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    border-top: 3px solid black;
-    background-color: seashell;
-    font-weight: bolder;
-    font-size: larger;
 }

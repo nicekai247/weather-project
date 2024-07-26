@@ -2,163 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <title>My Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>thời tiết</title>
+        <link rel="stylesheet" href="style.css" />
         <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
-            href="style.css"
         />
-        <script
-            src="script.js"
-            async
-        ></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="container">
-                    <a
-                        href="#"
-                        class="logo"
-                        >Hello!!</a
-                    >
-                    <ul class="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skill">Skill</a></li>
-                        <li><a href="#exp">Expierence</a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <div
-                class="container"
-                id="home"
-            >
-                <div class="my-image">
-                    <img
-                        src="./asset/deverloper.png"
-                        alt="this is a image about me"
-                    />
-                </div>
-                <div class="my-info">
-                    <h1>Hi, I am Kai!</h1>
-                    <p>Github: KaiNguyen247</p>
-                    <p>Email: cubu@contact.com</p>
-                    <p>Facebook: NMH</p>
-                    <p>Phone: +84234.567.89</p>
-                </div>
+        <div class="container">
+            <div class="search-box">
+                <i class="bx bxs-map"></i>
+                <input type="text" placeholder="địa điểm" id="city" />
+                <button class="bx bx-search-alt" id="search"></button>
             </div>
+            <div id="display"></div>
+        </div>
 
-            <div
-                class="about"
-                id="about"
-            >
-                <div class="my-intro">
-                    <h2>About me.</h2>
-                    <p>
-                        Welcome to my profile! I am Kai, a top-notch software
-                        developer with a strong passion for technology and
-                        software development. With years of experience in the
-                        industry, I have mastered multiple programming languages
-                        and modern technologies, enabling me to build advanced
-                        and efficient software solutions.
-                    </p>
-                    <h3>Project 1:</h3>
-                    <p>
-                        I led a team of developers in creating a new web
-                        application. This project greatly benefited the client
-                        and received numerous positive reviews.
-                    </p>
-                    <h3>Project 2:</h3>
-                    <p>
-                        I created an innovative mobile application for a
-                        startup. The app helped them expand their market and
-                        increase revenue.
-                    </p>
-                </div>
-                <div class="my-flex">
-                    <img
-                        src="./asset/project.png"
-                        alt="image about my project"
-                    />
-                </div>
-            </div>
-
-            <div
-                class="skill"
-                id="skill"
-            >
-                <div class="skill-img">
-                    <img
-                        src="./asset/skill.png"
-                        alt="image about my skill"
-                    />
-                </div>
-
-                <div class="skill-intro">
-                    <h2>My skill.</h2>
-                    <p>
-                        Programming: I have extensive experience in various
-                        programming languages, including but not limited to
-                        HTML, CSS, JavaScript, Python, and Java. I constantly
-                        strive to enhance my skills to stay current with the
-                        latest technology trends.
-                    </p>
-                    <p>
-                        Web Development: I am capable of developing complex web
-                        applications using frameworks such as React, Angular,
-                        and Vue.js. I also work with Node.js to create powerful
-                        server-side applications.
-                    </p>
-                    <p>
-                        Project Management: With excellent organizational and
-                        time management skills, I have led many projects from
-                        conception to successful deployment. I understand the
-                        importance of teamwork and clear communication during
-                        development.
-                    </p>
-                </div>
-            </div>
-
-            <div
-                class="expierence"
-                id="exp"
-            >
-                <div class="ex-intro">
-                    <h2>My expierence.</h2>
-                    <p>CS50X Certification from EDX.</p>
-                    <p>
-                        2019 - Leader at Google: Here, I contributed to
-                        improving the performance of existing applications and
-                        developing new features for users.
-                    </p>
-                    <p>
-                        2023 - Mobile developer at Apple: I was involved in
-                        designing and implementing innovative technology
-                        solutions, helping the company achieve significant
-                        business goals.
-                    </p>
-                </div>
-                <div class="ex-img">
-                    <img
-                        src="./asset/ex.png"
-                        alt="image about my ex-img"
-                    />
-                </div>
-            </div>
-        </main>
-
-        <footer>© 2024 NICEKAI. All rights reserved.</footer>
+        <script src="test.js"></script>
     </body>
 </html>
