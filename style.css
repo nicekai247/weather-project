@@ -17,6 +17,7 @@ body {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 400px;
     height: 60px;
     padding: 20px;

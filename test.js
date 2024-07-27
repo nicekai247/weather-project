@@ -133,6 +133,9 @@ class usingAPI {
         `;
 
         container.style.height = "400px";
+        setTimeout(() => {
+            container.style.backdropFilter = "blur(10px)";
+        }, 10);
     }
 }
 
