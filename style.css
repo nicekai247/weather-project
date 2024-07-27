@@ -72,12 +72,14 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    color: antiquewhite;
 }
 
 .search-box i {
     position: absolute;
     left: 10px;
     font-size: 20px;
+    color: antiquewhite;
 }
 
 #display {

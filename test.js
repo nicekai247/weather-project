@@ -114,7 +114,7 @@ class usingAPI {
                 this.displayWeather(resJson);
             })
             .catch((err) => {
-                console.log(err);
+                this.notFound();
             });
     }
 
@@ -124,7 +124,7 @@ class usingAPI {
         const { main, name, weather, sys, wind } = data;
 
         result.innerHTML = `
-            <h4>Thời tiết hiện tại ở ${name}</h2>
+            <h3>Thời tiết hiện tại ở ${name}</h3>
             <p>Quốc gia: ${sys.country}</p>
             <p>Nhiệt độ: ${(main.temp - 273.15).toFixed(2)}°C</p>
             <p>Mô tả: ${weather[0].description}</p>
@@ -133,6 +133,20 @@ class usingAPI {
         `;
 
         container.style.height = "400px";
+        setTimeout(() => {
+            container.style.backdropFilter = "blur(10px)";
+        }, 10);
+    }
+
+    notFound() {
+        let result = document.querySelector("#display");
+        let container = document.querySelector(".container");
+
+        result.innerHTML = `
+            <i class='bx bxs-error' style="font-size: 120px;"></i>
+            <h3>Không tìm thấy thành phố yêu cầu!</h3>
+        `;
+        container.style.height = "310px";
         setTimeout(() => {
             container.style.backdropFilter = "blur(10px)";
         }, 10);
@@ -157,9 +171,8 @@ const api = new usingAPI();
 document.addEventListener("DOMContentLoaded", () => {
     let input = document.querySelector("#city");
     let search = document.querySelector("#search");
-    let result = document.getElementById("weather");
 
-    document.addEventListener("click", () => {
+    search.addEventListener("click", () => {
         let weather = input.value;
         api.weather(weather);
     });
